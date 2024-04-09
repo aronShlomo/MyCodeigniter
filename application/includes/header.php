@@ -669,14 +669,10 @@
         <button type="submit" class="btn btn-primary btn-title">Maryland529</button>
         <?php echo form_close(); ?>
         <div class="nav-btn">
-            <?php echo form_open('account/logout', ['class' => 'form-horizontal']); ?>
-            <?php if ($users = $this->session->userdata('login')) : ?>
-                <script type="text/javascript">
-                    var login = document.getElementById('login');
-                    login.style.display = 'none';
-                </script>
-                <button type="submit" class="btn btn-primary btn-logout">Log out</button>
-            <?php endif; ?>
-            <?php echo form_close(); ?>
-        </div>
+
+
+
+
+
+
     </nav>

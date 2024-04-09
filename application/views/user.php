@@ -218,6 +218,13 @@ require_once(APPPATH . 'includes/header.php');
         <?php echo form_close(); ?>
     </div>
 
+
+    <div class="btns-user">
+        <?php echo form_open('account/logout', ['class' => 'from-horizontal']); ?>
+        <button class="home" type="submit">Logout</button>
+        <?php echo form_close(); ?>
+    </div>
+
     <!-- <div class="btns-user">
     </?php echo form_open('account/index', ['class' => 'from-horizontal']); ?>
     <button class="home" type="submit">Create new form</button>

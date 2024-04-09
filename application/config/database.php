@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 
 
-
+//your_new_password
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',

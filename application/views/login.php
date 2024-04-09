@@ -17,6 +17,19 @@ require_once(APPPATH . 'includes/header.php');
     <?php endif; ?>
 
 
+
+    <?php if ($error = $this->session->flashdata('user_signup')) : ?>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-dismissible alert-success error">
+                    <?php echo $error; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
+
  
 
 

@@ -3,7 +3,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 
-class account extends CI_Controller
+class Account extends CI_Controller
 {
 
     public function  __construct()
@@ -19,10 +19,10 @@ class account extends CI_Controller
         $children['children'] = $this->mAccount->getChildren();
         $this->load->view('account', $children);
 
-        $user = $this->session->userdata('lastname_user');
-        if (!$user) {
-            return redirect('account/signup');
-        }
+        // $user = $this->session->userdata('lastname_user');
+        // if (!$user) {
+        //     return redirect('account/signup');
+        // }
     }
 
     public function home()
@@ -64,10 +64,15 @@ class account extends CI_Controller
             return redirect('account/signup');
         }
         $data = $this->input->post();
+        $data['lastname'] = $this->input->post('lastname');
         $this->load->model('mAuto');
-        $lastname = $this->mAuto->insertUser($data);
-        $this->session->set_userdata('signup_lastname', $lastname);
-        return redirect('account/index');
+        if($this->mAuto->insertUser($data)){
+            $this->session->set_flashdata('user_signup', 'Hello  ' . $data['lastname'] . ' Please login for the first time to create a new form.');
+            return redirect('account/login');
+
+
+        }
+
     }
 
 
@@ -124,7 +129,6 @@ class account extends CI_Controller
 
     public function login()
     {
-        $this->session->unset_userdata('login');
         $this->load->view('login');
     }
 
@@ -182,25 +186,33 @@ class account extends CI_Controller
             $this->session->set_flashdata('userNOTmatch', 'Last Name Not Match In Account');
             return redirect('account/index');
         }
-        $user = $this->session->userdata('lastname_user');
-        if ($data != $user) {
-            $this->session->set_flashdata('userNOTmatch', $data . ' Not Match In Account');
+        // $user = $this->session->userdata('lastname_user');
+        // if ($data != $user) {
+        //     $this->session->set_flashdata('userNOTmatch', $data . ' Not Match In Account');
+        //     return redirect('account/index');
+        // } 
+        if ($user = !$this->mAuto->isLastNameValid($data)) {
+            $this->session->set_flashdata('userNOTmatch', $user . ' Not Match In Account');
             return redirect('account/index');
         }
-
         else {
             $data = $this->input->post();
-            $this->load->model('mAccount');
-            $this->mAccount->createAccount($data);
-            $this->mAccount->createAccountHistory($data);
-
-            $dataInfo = $this->mAccount->getAccount($data);
-            $this->session->set_flashdata('success', $dataInfo);
-            $dataId['children_id'] = $this->input->post('children_id');
-            $childrenId = $this->mAccount->getChildrenId($dataId);
-            $this->session->set_flashdata('childrenID', $childrenId);
-
-            $this->load->view('info');
+            // $data['lastname'] = $this->input->post('lastname');
+            // if($this->mAuto->isLastNameValid($data)){
+                $this->load->model('mAccount');
+                $this->mAccount->createAccount($data);
+                $this->mAccount->createAccountHistory($data);
+    
+                $dataInfo = $this->mAccount->getAccount($data);
+                $this->session->set_flashdata('success', $dataInfo);
+                $dataId['children_id'] = $this->input->post('children_id');
+                $childrenId = $this->mAccount->getChildrenId($dataId);
+                $this->session->set_flashdata('childrenID', $childrenId);
+    
+                $this->load->view('info');
+            
+            
+           
         }
 
 
@@ -213,6 +225,10 @@ class account extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('login');
+        $this->session->unset_userdata('lastname_user');
         return redirect('account/signup');
+
+       
+
     }
 }
