@@ -6,6 +6,8 @@ require_once(APPPATH . 'includes/header.php');
 
 
 
+
+
 <?php echo form_open('account/getSignup', ['class' => 'form-horizontal']); ?>
 
 <div class="signup_container">
@@ -49,48 +51,37 @@ require_once(APPPATH . 'includes/header.php');
 
 
     <div class="col-md-4">
-
         <label for="firstname">First Name </label>
-        <?php echo form_input([
-            'type' => 'text', 'name' =>
-            'firstname', 'placeholder' =>
-            'First Name', 'autofocus' => 'true',
-            'class' => 'form-control input-signup',
-            'value' => set_value('firstname')
-        ]); ?>
+        <input type="text" style="text-transform: capitalize;" name="firstname" placeholder="First Name" id="firstnameId" class="form-control input-signup" onkeyup="saveToCookie()">
     </div>
     <div class="col-md-4">
         <label for="lastname">Last Name </label>
-        <?php echo form_input([
-            'type' => 'text', 'name' =>
-            'lastname', 'placeholder' =>
-            'Last Name', 'autofocus' => 'true',
-            'value' => set_value('lastname'),
-            'class' => 'form-control input-signup'
-        ]); ?>
-
+        <input type="text" style="text-transform: capitalize;" name="lastname" placeholder="Last Name" id="lastnameId" 
+        class="form-control input-signup" onkeyup="saveToCookie()">
     </div>
     <div class="col-md-4">
         <label for="password">Password</label>
-        <?php echo form_input([
-            'type' => 'password',
-            'name' => 'password',
-            'placeholder' => 'Password',
-            'autofocus' => 'true',
-            'class' => 'form-control input-signup',
-        ]); ?>
+        <input type="password" name="password" placeholder="Password" id="password" class="form-control input-signup" onkeyup="saveToCookie()">
     </div>
+    <input type="checkbox" id="showPassword"> Show Password 
+
 
     <div class="col-md-4">
         <label for="password">Confirm Password</label>
-        <?php echo form_input([
-            'type' => 'password',
-            'name' => 'con_password',
-            'placeholder' => 'Confirm Password',
-            'autofocus' => 'true',
-            'class' => 'form-control input-signup',
-        ]); ?>
+        <input type="password" name="con_password" id="con_password" placeholder="Confirm Password" class="form-control input-signup">
     </div>
+
+
+    <script>
+        $(document).ready(function () {
+              $("#showPassword").on('change', function () {
+                  const passwordInput = $('#password');
+                  passwordInput.attr('type' , this.checked ? 'text' : 'password');
+            });
+
+        });
+    </script>
+
 
     <button type="submit" class="btn-create-signup">Submit</button>
     <!-- </?php  echo anchor('accountController/login', 'Login', ['class' => 'btn btn-primary']) ?>  -->
@@ -108,13 +99,29 @@ require_once(APPPATH . 'includes/header.php');
 
 
 
+<script>
+    function saveToCookie() {
+        const firstname = document.getElementById('firstnameId').value;
+        const password = document.getElementById('passwordId').value;
+        document.cookie = `firstnameIdValue=${encodeURIComponent(firstname)}; path=/`;
+        document.cookie = `lastnameIdValue=${encodeURIComponent(lastname)}; path=/`;
+        document.cookie = `passwordIdValue=${encodeURIComponent(password)}; path=/`;
+    }
 
+    // Retrieve the value from the cookie and set it in the textbox
+    function loadFromCookie() {
+        const cookieValue1 = decodeURIComponent(document.cookie.replace(/(?:(?:^|.*;\s*)firstnameIdValue\s*=\s*([^;]*).*$)|^.*$/, '$1'));
+        const cookieValue3 = decodeURIComponent(document.cookie.replace(/(?:(?:^|.*;\s*)passwordIdValue\s*=\s*([^;]*).*$)|^.*$/, '$1'));
+        document.getElementById('firstnameId').value = cookieValue1;
+        document.getElementById('lastnameId').value = cookieValue2;
+        document.getElementById('passwordId').value = cookieValue3;
+    }
 
-
-
-
-
-
+    function clearCookie() {
+        document.cookie = 'firstnameIdValue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = 'passwordIdValue=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    }
+</script>
 
 
 

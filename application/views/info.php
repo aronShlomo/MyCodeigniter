@@ -14,149 +14,258 @@ require_once(APPPATH . 'includes/header.php');
 
 
                 <h3>Parent Information</h3>
-                <p>Last Name: <?php echo $value->lastname  ?></p>
-                <p>Date Of Birth: <?php echo $value->date  ?></p>
-                <p>Social Security Number: <?php echo $value->ssn  ?></p>
+                <br>
+                <div class="parents-user">
+                    <div class="first-user">
+                        <p>First Name: <?php echo $value->username  ?></p>
+                        <p>Last Name: <?php echo $value->lastname  ?></p>
+                        <p>DOB: <?php echo $value->date  ?></p>
+                        <p>SSN: <?php echo $value->ssn  ?></p>
+                    </div>
+                    <div class="second-user">
+                        <p>First Name: <?php echo $value->second_username  ?></p>
+                        <p>Last Name: <?php echo $value->second_lastname  ?></p>
+                        <p>DOB: <?php echo $value->second_date  ?></p>
+                        <p>SSN: <?php echo $value->second_ssn  ?></p>
+                    </div>
+                    <br>
+                </div>
                 <br>
                 <h3>Child Information</h3>
+                <br>
                 <p>Number Of Children: <?php echo $value->children_id  ?></p>
-
                 <?php if ($value->children_id == 0) { ?>
                     <p><?php echo $value->zero_child  ?></p>
                 <?php } ?>
+
+
                 <?php if ($value->children_id == 1) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 2) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+
                 <?php } ?>
                 <?php if ($value->children_id == 3) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+
                 <?php } ?>
                 <?php if ($value->children_id == 4) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
-                    <p><?php echo $value->firstname_child_four  ?></p>
-                    <p><?php echo $value->ssn_child_four ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_four  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_four  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_four ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_four  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 5) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
-                    <p><?php echo $value->firstname_child_four  ?></p>
-                    <p><?php echo $value->ssn_child_four ?></p>
-                    <p><?php echo $value->firstname_child_five  ?></p>
-                    <p><?php echo $value->ssn_child_five ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_four  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_four  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_four ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_four  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_five  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_five  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_five ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_five  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 6) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
-                    <p><?php echo $value->firstname_child_four  ?></p>
-                    <p><?php echo $value->ssn_child_four ?></p>
-                    <p><?php echo $value->firstname_child_five  ?></p>
-                    <p><?php echo $value->ssn_child_five ?></p>
-                    <p><?php echo $value->firstname_child_six  ?></p>
-                    <p><?php echo $value->ssn_child_six ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_four  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_four  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_four ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_four  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_five  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_five  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_five ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_five  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_six  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_six  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_six ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_six  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 7) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
-                    <p><?php echo $value->firstname_child_four  ?></p>
-                    <p><?php echo $value->ssn_child_four ?></p>
-                    <p><?php echo $value->firstname_child_five  ?></p>
-                    <p><?php echo $value->ssn_child_five ?></p>
-                    <p><?php echo $value->firstname_child_six  ?></p>
-                    <p><?php echo $value->ssn_child_six ?></p>
-                    <p><?php echo $value->firstname_child_seven  ?></p>
-                    <p><?php echo $value->ssn_child_seven ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_four  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_four  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_four ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_four  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_five  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_five  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_five ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_five  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_six  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_six  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_six ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_six  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_seven  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_seven  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_seven ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_seven  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 8) { ?>
-                    <p><?php echo $value->firstname_child_one  ?></p>
-                    <p><?php echo $value->ssn_child_one  ?></p>
-                    <p><?php echo $value->firstname_child_two  ?></p>
-                    <p><?php echo $value->ssn_child_two ?></p>
-                    <p><?php echo $value->firstname_child_three  ?></p>
-                    <p><?php echo $value->ssn_child_three ?></p>
-                    <p><?php echo $value->firstname_child_four  ?></p>
-                    <p><?php echo $value->ssn_child_four ?></p>
-                    <p><?php echo $value->firstname_child_five  ?></p>
-                    <p><?php echo $value->ssn_child_five ?></p>
-                    <p><?php echo $value->firstname_child_six  ?></p>
-                    <p><?php echo $value->ssn_child_six ?></p>
-                    <p><?php echo $value->firstname_child_seven  ?></p>
-                    <p><?php echo $value->ssn_child_seven ?></p>
-                    <p><?php echo $value->firstname_child_eight  ?></p>
-                    <p><?php echo $value->ssn_child_eight ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_one  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_one  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_one  ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_one  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_two  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_two  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_two ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_two  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_three  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_three  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_three ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_three  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_four  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_four  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_four ?></p>
+                    <p><?php echo 'DOB: ' .  $value->dob_child_four  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_five  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_five  ?></p>
+                    <p><?php echo 'SSN: ' .  $value->ssn_child_five ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_five  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_six  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_six  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_six ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_six  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_seven  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_seven  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_seven ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_seven  ?></p>
+                    <p><?php echo 'First Name: ' . $value->username_child_eight  ?></p>
+                    <p><?php echo 'Last Name: ' . $value->firstname_child_eight  ?></p>
+                    <p><?php echo 'SSN: ' . $value->ssn_child_eight ?></p>
+                    <p><?php echo 'DOB: ' . $value->dob_child_eight  ?></p>
                 <?php } ?>
                 <?php if ($value->children_id == 9) { ?>
                     <p><?php echo $value->firstname_child_one  ?></p>
                     <p><?php echo $value->ssn_child_one  ?></p>
+                    <p><?php echo $value->dob_child_one  ?></p>
                     <p><?php echo $value->firstname_child_two  ?></p>
                     <p><?php echo $value->ssn_child_two ?></p>
+                    <p><?php echo $value->dob_child_two  ?></p>
                     <p><?php echo $value->firstname_child_three  ?></p>
                     <p><?php echo $value->ssn_child_three ?></p>
+                    <p><?php echo $value->dob_child_three  ?></p>
                     <p><?php echo $value->firstname_child_four  ?></p>
                     <p><?php echo $value->ssn_child_four ?></p>
+                    <p><?php echo $value->dob_child_four  ?></p>
                     <p><?php echo $value->firstname_child_five  ?></p>
                     <p><?php echo $value->ssn_child_five ?></p>
+                    <p><?php echo $value->dob_child_five  ?></p>
                     <p><?php echo $value->firstname_child_six  ?></p>
                     <p><?php echo $value->ssn_child_six ?></p>
+                    <p><?php echo $value->dob_child_six  ?></p>
                     <p><?php echo $value->firstname_child_seven  ?></p>
                     <p><?php echo $value->ssn_child_seven ?></p>
+                    <p><?php echo $value->dob_child_seven  ?></p>
                     <p><?php echo $value->firstname_child_eight  ?></p>
                     <p><?php echo $value->ssn_child_eight ?></p>
+                    <p><?php echo $value->dob_child_eight  ?></p>
                     <p><?php echo $value->firstname_child_nine  ?></p>
                     <p><?php echo $value->ssn_child_nine ?></p>
+                    <p><?php echo $value->dob_child_nine  ?></p>
+
                 <?php } ?>
                 <?php if ($value->children_id == 10) { ?>
                     <p><?php echo $value->firstname_child_one  ?></p>
                     <p><?php echo $value->ssn_child_one  ?></p>
+                    <p><?php echo $value->dob_child_one  ?></p>
                     <p><?php echo $value->firstname_child_two  ?></p>
                     <p><?php echo $value->ssn_child_two ?></p>
+                    <p><?php echo $value->dob_child_two  ?></p>
                     <p><?php echo $value->firstname_child_three  ?></p>
                     <p><?php echo $value->ssn_child_three ?></p>
+                    <p><?php echo $value->dob_child_three  ?></p>
                     <p><?php echo $value->firstname_child_four  ?></p>
                     <p><?php echo $value->ssn_child_four ?></p>
+                    <p><?php echo $value->dob_child_four  ?></p>
                     <p><?php echo $value->firstname_child_five  ?></p>
                     <p><?php echo $value->ssn_child_five ?></p>
+                    <p><?php echo $value->dob_child_five  ?></p>
                     <p><?php echo $value->firstname_child_six  ?></p>
                     <p><?php echo $value->ssn_child_six ?></p>
+                    <p><?php echo $value->dob_child_six  ?></p>
                     <p><?php echo $value->firstname_child_seven  ?></p>
                     <p><?php echo $value->ssn_child_seven ?></p>
+                    <p><?php echo $value->dob_child_seven  ?></p>
                     <p><?php echo $value->firstname_child_eight  ?></p>
                     <p><?php echo $value->ssn_child_eight ?></p>
+                    <p><?php echo $value->dob_child_eight  ?></p>
                     <p><?php echo $value->firstname_child_nine  ?></p>
                     <p><?php echo $value->ssn_child_nine ?></p>
+                    <p><?php echo $value->dob_child_nine  ?></p>
                     <p><?php echo $value->firstname_child_ten  ?></p>
                     <p><?php echo $value->ssn_child_ten ?></p>
+                    <p><?php echo $value->dob_child_ten  ?></p>
                 <?php } ?>
-     
-        
-    
+
+
+
 
             <?php endforeach; ?>
         <?php endif; ?>

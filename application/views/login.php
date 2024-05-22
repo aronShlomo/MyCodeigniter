@@ -29,6 +29,18 @@ require_once(APPPATH . 'includes/header.php');
     <?php endif; ?>
 
 
+    <?php if ($error = $this->session->flashdata('passNotMatch')) : ?>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-dismissible alert-danger error">
+                    <?php echo $error; ?>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
+
 
  
 
@@ -40,27 +52,46 @@ require_once(APPPATH . 'includes/header.php');
     <div class="md-4">
         <label for="lastname">Last Name</label>
         <?php echo form_input([
-            'type' => 'text', 'name' =>
-            'lastname', 'placeholder' =>
-            'Last Name', 'autofocus' => 'true',
+            'type' => 'text', 
+            'name' => 'lastname',
+            'style' => 'text-transform: capitalize;', 
+            'placeholder' =>'Last Name',
+            'autofocus' => 'true',
             'class' => 'form-control',
-            'value' => set_value('lastname')
         ]); ?>
     </div>
+    
 
 
     <div class="md-4">
         <label for="password">Password</label>
         <?php echo form_input([
-            'type' => 'password', 'name' =>
-            'password', 'placeholder' =>
-            'Password', 'autofocus' => 'true',
+            'type' => 'password', 
+            'name' =>'password',
+            'id' =>'password',
+            'style' => 'text-transform: capitalize;', 
+             'placeholder' =>'Password', 
+             'autofocus' => 'true',
             'class' => 'form-control'
         ]); ?>
     </div>
+    <input type="checkbox" id="showPassword"> Show Password
+
+
+    <script>
+      $(document).ready(function(){
+            $("#showPassword").on('change', function () {
+                  const passwordInput = $('#password'); 
+                 passwordInput.attr('type', this.checked ? 'text' : 'password');
+            });
+      });
+
+    </script>
+
 
     <button type="submit" class="login-submit ">Log in</button>
     <?php echo form_close(); ?>
+    <a class="forgot_pass" href="forgotpassform">Forgot Password</a>
 
 
     <?php echo form_open('account/signup', ['class' => 'from-horizontal']); ?>

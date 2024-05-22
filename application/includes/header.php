@@ -16,99 +16,236 @@
     <title>Maryland529</title>
 
     <style>
+        .forgotpass-container {
+            
+            border: 2px solid cornflowerblue;
+            border-radius: 50px;
+            width: 30%;
+            padding: 10px;
+            height: 40%;
+            text-align: center;
+            justify-content: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .reset_pass-container {
+            border: 2px solid cornflowerblue;
+            border-radius: 50px;
+            width: 30%;
+            padding: 10px;
+            height: 50%;
+            text-align: center;
+            justify-content: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .reset_password{
+            margin: 5px;
+        }
+        .enter-username-title-forgoten-pass{
+            color: blue;
+        }
+        .return-to-login{
+            text-decoration: none;
+        }
+
+        .form-pass-forgot{
+            margin-top: 10px;
+        }
+        .form-pass-reset{
+            margin-top: 10px;
+
+        }
+        .username_pass {
+            border-radius: 10px;
+            margin: 10px;
+            width: 60%;
+            padding: 4px;
+
+        }
+
+
+     
         .btn {
             display: flex;
             float: right;
         }
-        .upload{
+
+
+        .container-account {}
+
+        .parent {
             justify-content: center;
-            margin: 30px;
+            display: flex;
         }
-        .session_account{
+
+        .first-parents-info {
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 25%;
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .first-user {
+            display: inline-table;
+            justify-content: center;
+            margin: 20px;
+
+        }
+
+        .second-user {
+            display: inline-table;
+            justify-content: center;
+            margin: 20px;
+
+        }
+
+        .second-parents-info {
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 25%;
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .parents-info-title {
+            text-align: center;
+        }
+
+        .child-info-contaier {
+            background-color: cornflowerblue;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 50%;
+            margin-top: 40px;
+        }
+
+        .first-parents p {
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        .second-parents p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .child-container {
+            margin-left: 13%;
+            margin-top: 20px;
+        }
+
+
+        .first-parents {
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 25%;
+            margin-top: 50px;
+
+        }
+
+        .child-info {
+            display: none;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 20px;
+            width: 20%;
+            padding: 10px
+        }
+
+
+        .second-parents {
+            padding: 10px;
+            border-radius: 20px;
+            margin: 10px;
+            width: 25%;
+            margin-top: 50px;
+
+        }
+
+
+        .num_children {
+            margin-left: 25%;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        .children-select {}
+
+
+        .footer-account {
+            margin-left: 43%;
+            width: 30%;
+            margin-top: 20px;
+
+        }
+
+
+
+        .btn-accounts {
+            display: flex;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .home_account {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 6px;
+            margin: 20px;
+            color: blue;
+            border: none;
+            background-color: cornflowerblue;
+        }
+
+
+
+        #btn-submit-account {
+            background-color: cornflowerblue;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            margin: 12%;
+        }
+
+
+        .session_account {
             text-align: center;
             justify-content: center;
             position: absolute;
             top: 3%;
             left: 50%;
-            transform: translate(-50%, -50%);        }
-        
-        .inputs-parent{
-            background-color: aliceblue;
-            padding: 20px;
-            border-radius: 20px;
-            background-size: 400px;
-            margin-top: 20px;
-            text-align: center;
-            justify-content: center;
-            position: absolute;
-            width: 300px;
-            top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
         }
-       
-        .child-input{
-            width: 400px;
-            display: flex;
-            padding : 20px;
-            justify-content: center;
 
-        }
-        .child-info {
-            display: none;
-            padding : 20px;
+
+
+
+
+
+        .signup_have_account {
+            margin-left: 40px;
         }
 
-        .home_account{
-        border: none;
-        background-color: aliceblue;
-        color: blue;
-        font-style: italic;
-        font-weight: bold;
-        padding: 20px;
-        padding-left: 25px;
-        }
 
-        #btn-submit-account {
-            width: max-content;
-            background-color: blue;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 20px;
-            padding: 6px;
-            text-align: center;
-            
-        }
-        .upload_file{
-            margin: 20px;
-        }
-
-       .signup_have_account{
-        margin-left: 40px;
-       }
-
-        .index_container {
-            width: 400px;
-            border: 2px solid black;
-            border-radius: 50px;
-            padding: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-     
-        }
-       
-
-        .uploadFile {
+        /* .uploadFile {
             margin: 7px;
             
-        }
-
-        .uploadFile input {
-            margin: 5px;
-        }
+        } */
 
         .error {
             width: 300px;
@@ -120,14 +257,14 @@
             width: 300px;
         }
 
-    
+
 
         h2 {
             text-align: center;
             margin: 10px;
         }
 
-        
+
 
         .login_container {
             width: 400px;
@@ -181,10 +318,10 @@
         }
 
         .btn-create-signup:hover {
-              background-color: blue;
-              color: white;
+            background-color: blue;
+            color: white;
         }
-     
+
         .btn-title {
             border: none;
             background-color: cornflowerblue;
@@ -193,7 +330,7 @@
             color: blue;
         }
 
-    
+
         .btn-logout {
             border: none;
             background-color: cornflowerblue;
@@ -204,8 +341,8 @@
         }
 
         .btn-logout:hover {
-              background-color: blue;
-              color: white;
+            background-color: blue;
+            color: white;
         }
 
 
@@ -219,10 +356,10 @@
             display: inline-flex;
             text-align: center;
             margin: 10px;
-            
+
         }
 
-        .btn-user{
+        .btn-user {
             width: max-content;
             background-color: blue;
             color: white;
@@ -234,43 +371,79 @@
             text-align: center;
             margin: 10px;
         }
-        
 
-        .dont_have_an_account_yet{
+
+        .dont_have_an_account_yet {
             width: max-content;
             margin: 10px;
             margin-top: 10px;
         }
 
 
-        .btn-signup:hover {            
+        .btn-signup:hover {
             background-color: blue;
             color: white;
             border-radius: 20px;
-           
+
         }
 
 
         .login-submit {
             width: max-content;
-            background-color: blue;
-            color: white;
+            background-color: white;
+            color: cornflowerblue;
             font-weight: bold;
             font-size: 20px;
+            border: none;
+            justify-content: center;
             border-radius: 20px;
-            padding: 6px;
+            padding: 10px;
             display: inline-flex;
             text-align: center;
             margin: 25px;
             margin-left: 120px;
         }
+        .forgot_pass {
+            width: max-content;
+            background-color: white;
+            color: cornflowerblue;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 15px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            margin-left: 100px;
+        }
 
         
-        .login-submit:hover {            
+        .pass-forgoten-btn {
+            background-color: white;
+            color: cornflowerblue;
+            font-weight: bold;
+            font-size: 17px;
+            border: none;
+            border-radius: 20px;
+            padding: 5px;
+            margin: 20px;
+            margin-left: 55px;
+        }
+
+        
+        .pass-forgoten-btn:hover {
             background-color: blue;
             color: white;
             border-radius: 20px;
-           
+
+        }
+
+
+
+        .login-submit:hover {
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+
         }
 
         .btn-login {
@@ -301,7 +474,7 @@
 
         }
 
-       
+
 
         .title {
             font-size: 20px;
@@ -327,15 +500,12 @@
 
 
 
-
-        .form-control {
+        /* 
+     .form-control {
             margin: 10px;
 
-        }
+        } */
 
-        #date_input {
-            width: 200px;
-        }
 
         label {
             font-weight: bold;
@@ -349,7 +519,7 @@
 
         }
 
-      
+
         .btn {
             margin: 10px;
 
@@ -364,31 +534,25 @@
             margin-top: 50px;
             text-align: center;
         }
-        .btn-user_page{
+
+        .btn-user_page {
             text-decoration: none;
             color: blue;
             font-weight: bold;
             margin-top: 30px;
         }
 
-        .uploadFile {
-            width: 250px;
-            margin: 2px;
-           align-items: center;
-           margin-left: 50px;
-           margin-top: 40px;
+        .info {
+            color: blue;
+            font-weight: bold;
+
         }
 
         #btn-submit-file {
             margin: 5px;
             font-weight: bolder;
             width: min-content;
-            
-        }
 
-        #btn-submit-file:hover {
-            background-color: blue;
-            color: white;
         }
 
         .upload_title {
@@ -396,16 +560,22 @@
             margin: 2px;
 
         }
-        .container_user{
+
+        .container_user {
             padding: 40px;
             margin-top: 20px;
             text-align: center;
         }
-        hr{
+
+        hr {
             font-weight: bold;
         }
-       
-        .btn-edit{
+
+        .parents-info-container {
+            display: flex;
+        }
+
+        .btn-edit {
             width: max-content;
             background-color: blue;
             color: white;
@@ -416,7 +586,14 @@
             text-align: center;
             margin: 10px;
         }
-        .btn-delete{
+
+        .parents-user {}
+
+        .children-user {
+            display: flex;
+        }
+
+        .btn-delete {
             width: max-content;
             background-color: blue;
             color: white;
@@ -427,7 +604,8 @@
             text-align: center;
             margin: 10px;
         }
-        .btn-create{
+
+        .btn-create {
             width: max-content;
             background-color: blue;
             color: white;
@@ -440,70 +618,79 @@
             text-decoration: none;
         }
 
-        .btns-user{
+        .btns-user {
             display: flex;
             justify-content: center;
         }
-        .back_to_user_account{
+
+        .back_to_user_account {
             text-decoration: none;
             color: blue;
             text-align: center;
             font-weight: bold;
         }
-      .last_form{
-        margin-top: 40px;
-        text-align: center;
-        font-style: italic;
-        color: blue;
-      }
-      .home{
-        text-align: center;
-        font-size: 17px;
-        border: none;
-        background-color: white;
-        color: blue;
-        display: flex;
-        margin: 10px;
-        font-style: italic;
-        font-weight: bold;
-      }
-      h1{
-        color: blue;
-        
-      }
-      .home-container{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-      }
-      .home_user{
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        font-size: 17px;
-        justify-content: center;
-        display: flex;
-        margin-top: 20px;
-      }
-      .home_page{
-        width: 100%;
-        text-align: center;
-        margin-top:  20px;
-      }
-      .btn-ReturnToAccount{
-        padding-bottom: 10px;
-        margin: 10px;
-      }
-      ul{
-        display: flex;
-        
-      }
-      .home-result{
-        width: 100%;
-        padding: 5px;
-        margin: 10px;
-      }
-        
+
+        .last_form {
+            margin-top: 40px;
+            text-align: center;
+            font-style: italic;
+            color: black;
+        }
+
+        .home {
+            text-align: center;
+            font-size: 17px;
+            border: none;
+            background-color: white;
+            color: blue;
+            display: flex;
+            margin: 10px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: blue;
+
+        }
+
+        .home-container {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .home_user {
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            font-size: 17px;
+            justify-content: center;
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .home_page {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-ReturnToAccount {
+            padding-bottom: 10px;
+            margin: 10px;
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        .home-result {
+            width: 100%;
+            padding: 5px;
+            margin: 10px;
+        }
     </style>
 
     <script type="text/javascript">
@@ -617,51 +804,47 @@
                 child9.style.display = 'none';
                 child10.style.display = 'none';
             }
-            }
-            if (selectedValue == 8) {
-                child1.style.display = 'block';
-                child2.style.display = 'block';
-                child3.style.display = 'block';
-                child4.style.display = 'block';
-                child5.style.display = 'block';
-                child6.style.display = 'block';
-                child7.style.display = 'block';
-                child8.style.display = 'block';
-                child9.style.display = 'none';
-                child10.style.display = 'none';
-            }
-            if (selectedValue == 9) {
-                child1.style.display = 'block';
-                child2.style.display = 'block';
-                child3.style.display = 'block';
-                child4.style.display = 'block';
-                child5.style.display = 'block';
-                child6.style.display = 'block';
-                child7.style.display = 'block';
-                child8.style.display = 'block';
-                child9.style.display = 'block';
-                child10.style.display = 'none';
-            }
-            if (selectedValue == 10) {
-                child1.style.display = 'block';
-                child2.style.display = 'block';
-                child3.style.display = 'block';
-                child4.style.display = 'block';
-                child5.style.display = 'block';
-                child6.style.display = 'block';
-                child7.style.display = 'block';
-                child8.style.display = 'block';
-                child9.style.display = 'block';
-                child10.style.display = 'block';
-            }
-            
-        
-            
-        
+        }
+        if (selectedValue == 8) {
+            child1.style.display = 'block';
+            child2.style.display = 'block';
+            child3.style.display = 'block';
+            child4.style.display = 'block';
+            child5.style.display = 'block';
+            child6.style.display = 'block';
+            child7.style.display = 'block';
+            child8.style.display = 'block';
+            child9.style.display = 'none';
+            child10.style.display = 'none';
+        }
+        if (selectedValue == 9) {
+            child1.style.display = 'block';
+            child2.style.display = 'block';
+            child3.style.display = 'block';
+            child4.style.display = 'block';
+            child5.style.display = 'block';
+            child6.style.display = 'block';
+            child7.style.display = 'block';
+            child8.style.display = 'block';
+            child9.style.display = 'block';
+            child10.style.display = 'none';
+        }
+        if (selectedValue == 10) {
+            child1.style.display = 'block';
+            child2.style.display = 'block';
+            child3.style.display = 'block';
+            child4.style.display = 'block';
+            child5.style.display = 'block';
+            child6.style.display = 'block';
+            child7.style.display = 'block';
+            child8.style.display = 'block';
+            child9.style.display = 'block';
+            child10.style.display = 'block';
+        }
     </script>
 </head>
 
-<body>
+<body onload="loadFromCookie()">
 
 
     <nav class="navbar nav">
@@ -671,8 +854,8 @@
         <div class="nav-btn">
 
 
-
-
-
+            <?php echo form_open('account/home', ['class' => 'from-horizontal']); ?>
+            <button class="home_account" type="submit">Home</button>
+            <?php echo form_close(); ?>
 
     </nav>
